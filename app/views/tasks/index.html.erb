@@ -5,7 +5,7 @@
   <ul>
     <% @tasks.each do |task| %>
       <li class="list-group-item">
-        <%= link_to task.title, task_path(task.id) %> / <%= task.description %> <%= link_to "update", edit_task_path(task.id) %> <%= link_to "delete", task_path(task), method: :delete %>
+        <%= link_to task.title, task_path(task.id) %> / <%= task.description %> <%= link_to "update", edit_task_path(task.id), class: "btn btn-warning" %> <%= link_to "delete", task_path(task), method: :delete, class: "btn btn-primary" %>
       </li>
     <% end %>
   </ul>
